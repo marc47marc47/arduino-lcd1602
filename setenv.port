@@ -1,0 +1,6 @@
+#!/bin/sh
+
+usbipd list
+port=`usbipd list | grep 'Arduino Uno'|cut -d"(" -f2|cut -d")" -f1`
+echo "Find on port: $port"
+export RAVEDUDE_PORT=${port}
